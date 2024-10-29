@@ -1,0 +1,5 @@
+#This is the basics of python 
+
+#Example: "Hello World!" in Python
+
+print("Hello, World!")  # This is the simplest way to print text in Python.
