@@ -1,0 +1,42 @@
+#program practice if/elif/else: calculating weights on planets
+
+# planet gravity: to calculate your weight on each planet you will multiply your weight by the gravity of the planet.
+
+#This section asks the user for their weight and stores it in the variable "weight" and converts it to a float.
+
+#It also asks the user for their planet and stores it in the variable "planet" which is represented by a number between 1 and 7.
+
+# Ask the user for their weight in pounds and convert the input to a float. We used float because the weight can be a decimal number and any time you use a decimal you need to use float.
+
+#the "/n" is used to create a new line within a string.
+weight = float(input("Enter Weight in lb\n"))
+# Ask the user to select a planet by entering a number corresponding to that planet. int will be used because our choices are integers *1,2,3..etc
+planet = int(input("Enter Planet\n 1. Mercury\n 2. Venus\n 3. Earth\n 4. Mars\n 5. Jupiter\n 6. Saturn\n 7. Uranus"))
+
+# Define veriable for the gravity relative to Earth for each planet
+#to find the reletive gravity numbers look up on google.
+mercuryGrav = 0.91
+venusGrav = 0.93
+marsGrav = 0.38
+jupiterGrav = 2.34
+saturnGrav = 1.06
+uranusGrav = 0.92
+neptuneGrav = 1.19
+
+# Calculate and print the weight on the selected planet using the corresponding gravity factor. the forumla for the weight is weight * gravity. THe weight is then printed with a message indicating the weight on the selected planet.
+if planet == 1:
+    print(weight * mercuryGrav)
+elif planet == 2:
+    print(weight * venusGrav)
+elif planet == 3:
+    print(weight * marsGrav)
+elif planet == 4:
+    print(weight * jupiterGrav)
+elif planet == 5:
+    print(weight * saturnGrav)
+elif planet == 6:
+    print(weight * uranusGrav)
+elif planet == 7:
+    print(weight * neptuneGrav)  
+else:
+    print("invalid selection")
