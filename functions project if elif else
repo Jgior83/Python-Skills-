@@ -1,0 +1,49 @@
+#practice with functions and if statements
+
+print("Welcome to hauler shipping")
+
+print("How would you like to ship your package?\n 1. Ground Shipping\n 2. Ground Shipping Premium\n 3. Drone Shipping")
+
+# Prompt user to choose a shipping method by entering a number
+shipping_method = int(input("Enter your shipping method:\n"))
+
+def cost_ground():
+    # Function to calculate the cost of ground shipping based on weight
+    weight = float(input("Enter the weight of your package:\n"))
+    if weight <= 2:
+        cost_ground = round(weight * 1.5 + 20, 2)  # Calculate cost for packages 2 lbs or less
+    elif weight <= 6:
+        cost_ground = round(weight * 3.00 + 20, 2)  # Calculate cost for packages between 2 and 6 lbs
+    elif weight <= 10:
+        cost_ground = round(weight * 4.00 + 20, 2)  # Calculate cost for packages between 6 and 10 lbs
+    else:
+        cost_ground = round(weight * 4.75 + 20, 2)  # Calculate cost for packages over 10 lbs
+    print("Ground Shipping $", cost_ground)  # Output the cost
+
+def shipping_cost_ground_premium():
+    # Function to print the cost of ground shipping premium which is a flat rate
+    cost_ground_premium = round(125.00, 2)
+    print("Ground Shipping Premium $", cost_ground_premium)  # Output the flat rate cost
+
+def shipping_cost_drone():
+    # Function to calculate the cost of drone shipping based on weight
+    weight = float(input("Enter the weight of your package:\n"))
+    if weight <= 2:
+        cost_drone = round(weight * 4.5, 2)  # Calculate cost for packages 2 lbs or less
+    elif weight <= 6:
+        cost_drone = round(weight * 9.00, 2)  # Calculate cost for packages between 2 and 6 lbs
+    elif weight <= 10:
+        cost_drone = round(weight * 12.00, 2)  # Calculate cost for packages between 6 and 10 lbs
+    else:
+        cost_drone = round(weight * 14.25, 2)  # Calculate cost for packages over 10 lbs
+    print("Drone Shipping: $", cost_drone)  # Output the cost
+
+# Conditional statements to determine which shipping method's function to call
+if shipping_method == 1:
+    cost_ground()  # Call function for ground shipping cost calculation
+elif shipping_method == 2:
+    shipping_cost_ground_premium()  # Call function to output premium ground shipping cost
+elif shipping_method == 3:
+    shipping_cost_drone()  # Call function for drone shipping cost calculation
+else:
+    print("Invalid shipping method")  # Output if the input is not recognized
