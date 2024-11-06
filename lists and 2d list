@@ -1,0 +1,42 @@
+# Your code below:
+#code below establishes a variable with names [] indicate this will 
+#be a list. 
+
+first_names = ["Ainsley", "Ben", "Chani", "Depak"] 
+
+preferred_size = ["Small", "Large", "Medium"]
+
+#preferred_size.append is the method we use to add or append objects in the list
+#preferred_size(list name) .append(function to execute)and ("medium")
+#is what you are adding. 
+
+preferred_size.append("Medium")
+
+#output code
+
+print(preferred_size)
+
+#the following code is still a list but called a 2d list. This is a list that
+#contains smaller list of data with in it. 
+
+customer_data = [["Ainsley", "Small",True],["Ben","Large",False],["Chani","Medium",True],["Depak","Medium", False]]
+
+print(customer_data)
+
+#the code below is changing information in a 2d list the [2][-1] represents
+#the position and value of the data being changed. in list data is 
+#listed or indexed starting at 0 then goes up. We use this indexing
+#to tell the comuter where to change. 
+#for exampl customer_data[2][-1]=false is telling us they want out of 
+#that list Chani is our position and with [-1] is the last value which
+#is set at True to change to false. 
+
+customer_data[2][-1] = False
+
+customer_data[1].remove(False)
+
+#We included some new data in the code below and we added it by creating
+#a new veriable and adding it with the existing veriable with 2d list, 
+customer_data_final = customer_data + [["Amit", "Large", True], ["Karim", "X-Large", False]]
+
+print(customer_data_final)
