@@ -1,0 +1,58 @@
+# This project showcases how to use lists, 2D lists, and functions like .append() and .remove().
+# It demonstrates accessing and manipulating both 1D and 2D lists.
+
+# List from the previous semester's grades. This is a 2D list (a list of lists).
+last_semester_gradebook = [
+    ["politics", 80],    # Each sublist represents a subject and its corresponding grade.
+    ["latin", 96],
+    ["dance", 97],
+    ["architecture", 65]
+]
+
+# Step 1: Create a list of subjects for the current semester (1D list).
+subjects = ["physics", "calculus", "poetry", "history"]
+
+# Step 2: Create a list of grades for the current semester (1D list).
+grades = [98, 97, 85, 88]
+
+# Step 3: Combine subjects and grades into a 2D list called gradebook.
+# Each element of gradebook is a sublist containing a subject and its grade.
+gradebook = [
+    ["physics", 98],
+    ["calculus", 97],
+    ["poetry", 85],
+    ["history", 88]
+]
+
+# Step 4: Add a new subject and grade to the 2D list using the .append() method.
+# .append() takes one argument and adds it to the end of the list.
+# Here, we are adding a new sublist ["computer science", 100] to gradebook.
+gradebook.append(["computer science", 100])
+
+# Step 5: Add another subject and grade.
+gradebook.append(["visual arts", 93])
+
+# Step 6: Modify the grade of the last subject in the list.
+# To access elements in a 2D list, use two sets of brackets.
+# The first bracket accesses the sublist, and the second accesses the specific item in that sublist.
+# Here, gradebook[-1] gets the last sublist ["visual arts", 93].
+# gradebook[-1][-1] accesses the grade in that sublist (93), and we update it to 98.
+gradebook[-1][-1] = 98
+
+# Step 7: Remove a specific sublist (subject and grade) using .remove().
+# This method removes the first occurrence of the specified sublist.
+# We are removing ["poetry", 85] from gradebook.
+gradebook.remove(["poetry", 85])
+
+# Step 8: Add a new subject "music" with a grade of 95 to gradebook.
+gradebook.append(["music", 95])
+
+# Step 9: Combine last semester's grades with the current semester's gradebook to form a complete grade record.
+# The + operator is used to concatenate the two 2D lists.
+full_gradebook = last_semester_gradebook + gradebook
+
+# Step 10: Print the full gradebook, which now contains grades from both semesters.
+print(full_gradebook)
+
+# Explanation of output:
+# The printed result will be a 2D list that includes all the subject-grade pairs from both semesters.
