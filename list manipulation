@@ -1,0 +1,45 @@
+#in this section we are manipulating data in list
+
+# Define the initial inventory list.
+inventory = ["twin bed", "twin bed", "headboard", "queen bed", "king bed", "dresser", "dresser", 
+             "table", "table", "nightstand", "nightstand", "king bed", "king bed", "twin bed", 
+             "twin bed", "sheets", "sheets", "pillow", "pillow"]
+
+# Checkpoint 1: Get the length of the list.
+# Use len() to determine how many items are in the list.
+inventory_len = len(inventory)
+
+# Checkpoint 2: Access the first item in the list.
+# Indexing starts at 0, so inventory[0] gives the first item.
+first = inventory[0]
+
+# Checkpoint 3: Access the last item in the list.
+# Using negative indexing, inventory[-1] fetches the last item.
+last = inventory[-1]
+
+# Checkpoint 4: Slice the list from index 2 to 5 (up to, but not including, 6).
+# Use list slicing [start:end] to get a sublist.
+inventory_2_6 = inventory[2:6]
+
+# Checkpoint 5: Get the first three items from the list.
+# Slicing without a starting index defaults to the beginning (index 0).
+first_3 = inventory[:3]
+
+# Checkpoint 6: Count the number of occurrences of "twin bed".
+# The count() method counts how many times a specific item appears in the list.
+twin_beds = inventory.count("twin bed")
+
+# Checkpoint 7: Remove the item at index 4.
+# pop(index) removes and returns the item at the given index.
+removed_item = inventory.pop(4)
+
+# Checkpoint 8: Insert an item at a specific position (index 10).
+# The insert(index, item) method places an item at the given position.
+inventory.insert(10, "19th Century Bed Frame")
+
+# Checkpoint 9: Sort the list in place.
+# The sort() method arranges the list items in ascending order.
+inventory.sort()
+
+# Print the modified inventory list to see the result.
+print(inventory)
